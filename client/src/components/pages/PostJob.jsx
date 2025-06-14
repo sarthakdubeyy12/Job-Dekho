@@ -1,6 +1,6 @@
 // src/pages/PostJob.jsx
 import React, { useState } from 'react';
-import axios from 'axios';
+import API from '../../api';
 
 const PostJob = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ const PostJob = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:5001/api/jobs', formData);
+      await API.post('/jobs', formData);
       setSuccess('Job posted successfully!');
       setError('');
       setFormData({ title: '', company: '', location: '', description: '' });

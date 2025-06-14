@@ -5,6 +5,7 @@ import { MapPin, Briefcase, IndianRupee, Heart } from 'lucide-react';
 import { getAuth } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import API from '../../api';
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);
@@ -15,7 +16,7 @@ const Jobs = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get('http://localhost:5001/api/jobs');
+        const res = await API.get('/jobs');
         setJobs(res.data);
       } catch (err) {
         console.error('Error fetching jobs:', err);

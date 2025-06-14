@@ -1,5 +1,6 @@
 // src/components/JobList.jsx
 import React, { useEffect, useState } from "react";
+import API from '../api';
 
 const JobList = () => {
   const [jobs, setJobs] = useState([]);
@@ -8,7 +9,11 @@ const JobList = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch("http://localhost:5001/api/jobs");
+        const res = await fetch(
+  `${process.env.NODE_ENV === 'development' 
+    ? 'http://localhost:5001' 
+    : process.env.REACT_APP_API_URL}/api/jobs`
+);
         const data = await res.json();
         setJobs(data || []); // Depends on API structure
       } catch (err) {
