@@ -2,8 +2,11 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: '/api', // Use relative URL since we have proxy configured
-  withCredentials: false, // Set to false since we're using proxy
+  baseURL:
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:5001/api' // local backend
+      : `${process.env.REACT_APP_API_URL}/api`, // deployed backend
+  withCredentials: false,
 });
 
 export default API;
