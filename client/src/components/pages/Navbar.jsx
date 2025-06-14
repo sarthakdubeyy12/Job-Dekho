@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <nav style={navStyle}>
-      <div style={logoStyle}>Nayi मंज़िल</div>
+      <div style={logoStyle}>Job Dekho</div>
       <div style={navLinksStyle}>
         <Link to="/" style={linkStyle}>Home</Link>
         <Link to="/jobs" style={linkStyle}>Jobs</Link>

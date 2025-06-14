@@ -83,15 +83,15 @@ const Home = () => {
     {/* 🧾 About Us Section */}
 <section className="w-full max-w-8xl mt-80 mb-48 px-4 sm:px-10 text-white">
   <h2 className="text-7xl font-extrabold text-center mb-10 bg-gradient-to-r from-blue-300 to-white bg-clip-text text-transparent tracking-wide italic">
-    About Nayi मंज़िल
+    About Job Dekho
   </h2>
   <p className="text-xl sm:text-2xl leading-relaxed text-gray-200 font-semibold italic tracking-wide">
-    Welcome to <strong className="text-white font-bold">Nayi मंज़िल</strong>, a forward-thinking job portal that bridges the gap
+    Welcome to <strong className="text-white font-bold">Job Dekho</strong>, a forward-thinking job portal that bridges the gap
     between opportunity and talent. Our platform is designed to empower companies and job seekers
     alike through a seamless and transparent hiring ecosystem.
   </p>
   <p className="text-xl sm:text-2xl leading-relaxed text-gray-200 font-semibold italic tracking-wide mt-6">
-    At <strong className="text-white font-bold">Nayi मंज़िल</strong>, we collaborate directly with companies who share their job data with us.
+    At <strong className="text-white font-bold">Job Dekho</strong>, we collaborate directly with companies who share their job data with us.
     These listings are published on our platform in real-time, ensuring that job seekers have
     access to the most current opportunities across a wide range of industries.
   </p>
@@ -100,7 +100,7 @@ const Home = () => {
     no intermediaries, no delays, and no need to contact support. With our intuitive self-service
     tools, recruiters can quickly list positions, manage applications, and find the right candidates
     with ease. Whether you're an organization looking to hire or a candidate searching for the next big
-    opportunity, <strong className="text-white font-bold">Nayi मंज़िल</strong> is your trusted partner in navigating the journey toward a better future.
+    opportunity, <strong className="text-white font-bold">Job Dekho</strong> is your trusted partner in navigating the journey toward a better future.
   </p>
   
 </section>
@@ -110,7 +110,7 @@ const Home = () => {
     This application is made with ❤️ by <span className="text-white font-bold">Sarthak Dubey</span>.
   </p>
   <p className="mt-4 text-lg sm:text-xl text-gray-400 italic font-[cursive]">
-    My vision behind building <strong>Nayi मंज़िल</strong> was to create a transparent, real-time job portal that empowers both Companies and Users.
+    My vision behind building <strong>Job Dekho</strong> was to create a transparent, real-time job portal that empowers both Companies and Users.
     I believe in tech as a bridge to opportunity — fast, direct, and human-centered.
   </p>
 </section>
