@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
-import axios from 'axios';
 import { MapPin, Briefcase, IndianRupee, Heart } from 'lucide-react';
 import { getAuth } from 'firebase/auth';
 import { toast } from 'react-toastify';
@@ -26,7 +24,7 @@ const Jobs = () => {
     const fetchWishlist = async () => {
       if (user) {
         try {
-          const res = await axios.get(`http://localhost:5001/api/wishlist/${user.uid}`);
+          const res = await API.get(`/wishlist/${user.uid}`);
           const wishlistIds = res.data.map((j) => j._id);
           setWishlist(wishlistIds);
         } catch (err) {
@@ -47,11 +45,11 @@ const Jobs = () => {
 
     try {
       if (wishlist.includes(jobId)) {
-        await axios.delete(`http://localhost:5001/api/wishlist/${user.uid}/${jobId}`);
-        setWishlist((prev) => prev.filter((id) => id !== jobId));
-        toast.info("Removed from Wishlist");
+  await API.delete(`/wishlist/${user.uid}/${jobId}`);
+  setWishlist((prev) => prev.filter((id) => id !== jobId));
+  toast.info("Removed from Wishlist");
       } else {
-        await axios.post(`http://localhost:5001/api/wishlist/add`, {
+        await API.post('/wishlist/add',{
           userId: user.uid,
           jobId,
         });
